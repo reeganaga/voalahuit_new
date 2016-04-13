@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="judul text-center animated fadeInDown"><h1>Galeri Voala Huit Gift</h1></div>
+	<div class="judul text-center animated fadeInDown"><h1>Galeri Voala Huit </h1></div>
 </div>
 <div class="row">
 	<div class="col-md-12 ">
