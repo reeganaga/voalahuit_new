@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Voala Huit</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+
+	<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+	<script src="desainpaper/desainPaper.js?1459339718380"></script>
+<script type="text/javascript">
+var canvas, stage, exportRoot;
+function init() {
+	// --- write your JS code here ---
+	
+	canvas = document.getElementById("canvas");
+	images = images||{};
+
+	var loader = new createjs.LoadQueue(false);
+	loader.installPlugin(createjs.Sound);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(lib.properties.manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete(evt) {
+	exportRoot = new lib.desainPaper();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+	stage.enableMouseOver();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+
+
+function playSound(id, loop) {
+	return createjs.Sound.play(id, createjs.Sound.INTERRUPT_EARLY, 0, 0, loop);
+}
+</script>
+</head>
+<body>
+  	<nav class="navbar">
+		<img src="images/Desain_MenuUtama1.png" class="header animated bounceInDown">
+		<div class="header-content">
+			<div class="info-header">
+				
+			</div>
+		</div>
+ 	</nav>
+ 	<div class="container content-custom">
+ 		
+ 		<div class="row">
+ 			<div class="col-md-6 animated zoomInLeft" id="content-home">
+
+ 				<ul class="menu-home center-block">
+ 					<a href="desainpaper/desainpaper.html">
+ 						<li class="bg-blue">
+	 					<img src="images/desain.png" class="icon-menu"><b class="text-center">hhhhh</b> <i class="glyphicon glyphicon-chevron-right"></i></li>	
+ 					</a>
+ 					
+ 					<li class="bg-red">
+ 					<img src="images/desain.png" class="icon-menu">hhhhh</li>
+ 					<li class="bg-green">
+ 					<img src="images/desain.png" class="icon-menu">hhhhh</li>
+ 				</ul>
+ 			</div>
+ 			<div class="col-md-6 animated zoomInRight" id="content-home">
+ 				<video width="100%" controls="">
+ 					<source src="videos/voala.mp4" type="video/mp4">
+ 				</video>
+ 			</div>
+ 		</div>
+ 	</div>
+</body>
+</html>
