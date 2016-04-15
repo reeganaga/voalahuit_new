@@ -60,9 +60,9 @@ function playSound(id, loop) {
 			<div class="info-header">
 				<ul class="menu-top animated flipInX">
 					<a href="?page=desainpaper"><li class="bg-tosca">Desain Papercraft</li></a>
-					<a href="?page=galeri"><li class="bg-red">Galeri</li></a>
-					<a href="?page=bantuan"><li class="bg-navy">Cara Pemesanan</li></a>
-					<a href="#"><li class="bg-red">Tentang</li></a>
+					<a href="?page=galeri"><li class="bg-red">Gallery</li></a>
+					<a href="?page=bantuan"><li class="bg-navy">How to Orders</li></a>
+					<a href="page=tentang"><li class="bg-red">About us</li></a>
 				</ul>
 			</div>
 		</div>
