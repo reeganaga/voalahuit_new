@@ -370,3 +370,22 @@ text-align: center;
 /*position: absolute;*/
 
 }
+
+.body-content{
+padding: 0px 30px;
+}
+
+.box-content{
+background: #fff;
+box-shadow: 0 4px 2px -2px gray;
+border: 1px solid #cbcbcb;
+}
+.box-header{
+border-bottom: 1px solid rgb(210, 203, 203);
+padding: 10px;
+background: #fffabf;
+text-align: center;
+}
+.box-body{
+  padding: 10px;
+}
