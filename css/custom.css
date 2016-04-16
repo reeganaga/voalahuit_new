@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'salinaregular';
+    src: url(../fonts/salinaregular.ttf);
+}
 .header{
 	height: 200px;
 	position: absolute;
@@ -48,7 +52,7 @@ transition: all 0.3 ease;
 }
 
 .menu-home li{
-  font-family: 'Tangerine', serif;
+  font-family: 'salinaregular', serif;
   font-size: 50px;
   float: left;
   width: 300px;
@@ -96,7 +100,9 @@ font-size: 1.5em;
 }
 
 .menu-top a{
-  font-family: 'Open Sans Condensed', sans-serif;
+  /*font-family: 'Open Sans Condensed', sans-serif;*/
+  font-family: 'salinaregular', sans-serif;
+
   text-decoration: none;
   color: #fff;
   font-size: 1.2em;
@@ -143,7 +149,9 @@ float: left;
 }
 .judul{
   margin-bottom: 30px;
-  font-family: 'Open Sans Condensed', sans-serif;
+  /*font-family: 'Open Sans Condensed', sans-serif;*/
+  font-family: 'salinaregular', sans-serif;
+  
   animation-duration: 3s;
   animation-delay: 1s;
 }
@@ -215,6 +223,34 @@ float: left;
    border:0px solid rgba(0,0,0,0.7);
    visibility:hidden;
 }
+
+.third-effect .mask {
+opacity: 0;
+overflow: visible;
+border: 50px solid rgba(0,0,0,0.0);
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+-webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+-o-transition: all 0.4s ease-in-out;
+-ms-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;
+background: rgba(0,0,0,0.7);
+text-align: center;
+}
+.third-effect:hover .mask {
+   opacity: 1;
+    color: #fff;
+   /*border:100px solid rgba(0,0,0,0.7);*/
+}
+
+.third-effect:hover .mask a{
+    color: #fff;
+    text-decoration: none;
+   /*border:100px solid rgba(0,0,0,0.7);*/
+}
+
 .galeri a img{
   -webkit-animation-fill-mode:both;
 }
@@ -313,4 +349,24 @@ left: 55px;
 }
 .papercraft-jadi{
   height: 700px;
+}
+
+.desain-papercraft{
+height: 150px;
+background: url('../images/cara_pemesanan.jpg');
+/*padding: 35px 0px 0px 0px;*/
+background-size: 100% 150px;
+overflow: hidden;
+}
+
+.desain-papercraft:hover{
+
+}
+.banner-label{
+font-family: 'salinaregular', sans-serif;
+font-size: 2.5em;
+text-align: center;
+/*left: 0px;*/
+/*position: absolute;*/
+
 }

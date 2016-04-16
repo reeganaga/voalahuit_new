@@ -2,13 +2,13 @@
  			<div class="col-md-6 animated zoomInLeft" id="content-home">
 
  				<ul class="menu-home center-block">
- 					<a href="index.php?page=desainpaper">
+ 					<a href="" data-toggle="modal" data-target="#pilihdesain" data-remote="false">
  						<li class="bg-tosca shadow-bottom">
 		 					<div class="left-menu">
 	 							<img src="images/desain.png" class="icon-menu img-responsive">
 	 						</div>
 	 						<div class="right-menu text-center">
-	 						Desain Papercraft		
+	 						Make Your Gift		
 	 						</div>
 	 					</li>	
  					</a>

@@ -11,9 +11,9 @@
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
-	<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+	<script src="js/jquery-1.9.0.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+	<script src="js/createjs-2015.11.26.min.js"></script>
 	<script src="desainPaper.js?1459339718380"></script>
 
 <script>
@@ -55,11 +55,11 @@ function playSound(id, loop) {
 </head>
 <body onload="init();">
   	<nav class="navbar">
-		<a href="index.php"><img src="images/Desain_MenuUtama.png" class="header animated bounceInDown"></a>
+		<a href="index.php"><img src="images/Desain_MenuUtama.png" class="header animated bounceInDown" ></a>
 		<div class="header-content">
 			<div class="info-header">
 				<ul class="menu-top animated flipInX">
-					<a href="?page=desainpaper"><li class="bg-tosca">Desain Papercraft</li></a>
+					<a href="" data-toggle="modal" data-target="#pilihdesain" data-remote="false"><li class="bg-tosca">Make Your Gift</li></a>
 					<a href="?page=galeri"><li class="bg-red">Galeri</li></a>
 					<a href="?page=bantuan"><li class="bg-navy">Cara Pemesanan</li></a>
 					<a href="#"><li class="bg-red">Tentang</li></a>
@@ -83,4 +83,52 @@ function playSound(id, loop) {
  		
  	</div>
 </body>
+
+<!-- Small modal -->
+
+<div id="pilihdesain" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <!-- <input type="text" class="form-control" id="recipient-name"></input> -->
+        <div class="row">
+        	<div class="col-md-12">
+        		<div class="desain-papercraft third-effect">
+        		<!-- <img src="images/Desain_MenuUtama1.png" class="banner-img"> -->
+        			<div class="mask">
+        				<a href="index.php?page=desainpaper" class="banner-label">Papercraft</a>
+        			</div>
+        		</div>
+	        </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-12">
+        		<div class="desain-papercraft third-effect">
+        		<!-- <img src="images/Desain_MenuUtama1.png" class="banner-img"> -->
+        			<div class="mask">
+        				<a class="banner-label">Papercraft</a>
+        			</div>
+        		</div>
+	        </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-12">
+        		<div class="desain-papercraft third-effect">
+        		<!-- <img src="images/Desain_MenuUtama1.png" class="banner-img"> -->
+        			<div class="mask">
+        				<a class="banner-label">Papercraft</a>
+        			</div>
+        		</div>
+	        </div>
+        </div>
+	        
+	        
+        <!-- <div id="rambut"><img src=""></div> -->
+        
+      </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 </html>
