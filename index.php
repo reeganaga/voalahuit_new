@@ -58,14 +58,24 @@ function playSound(id, loop) {
 		<a href="index.php"><img src="images/Desain_MenuUtama.png" class="header animated bounceInDown" ></a>
 		<div class="header-content">
 			<div class="info-header">
-				<ul class="menu-top animated flipInX">
 
-					<a href="?page=home"><li class="bg-tosca">Home</li></a>
-					<a href="?page=galeri"><li class="bg-red">Gallery</li></a>
-					<a href="?page=bantuan"><li class="bg-navy">How to Orders</li></a>
-					<a href="?page=tentang"><li class="bg-red">About us</li></a>
+				<ul class="nav nav-pills menu-top animated flipInX" role="tablist">
+			      <li role="presentation" class="bg-tosca"><a href="?page=home">Home</a></li>
+			      <li role="presentation" class="bg-red"><a href="?page=home">Gallery</a></li>
+			      <li role="presentation" class="bg-navy"><a href="?page=home">How to Orders</a></li>
+			      <li role="presentation" class="bg-red"><a href="?page=home">About us</a></li>
 
-				</ul>
+			      <li role="presentation" class="dropdown bg-navy">
+			        <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			          Transaction
+			          <span class="caret"></span>
+			        </a>
+			        <ul id="menu3" class="dropdown-menu bg-navy" aria-labelledby="drop6">
+			          <li><a href="#">Check Your Gift</a></li>
+			          <li><a href="?page=konfirmasi">Confirmation</a></li>
+			        </ul>
+			      </li>
+			    </ul> <!-- /pills -->
 			</div>
 		</div>
  	</nav>
