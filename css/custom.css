@@ -52,7 +52,17 @@ transition: all 0.3 ease;
 }
 
 .menu-home li{
+
   font-family: 'salinaregular', serif;
+
+  font-family: "Salina";
+    src: url("http://db.onlinewebfonts.com/t/5d649efd0c5c7b0f7fcca5962e781d6e.eot");
+    src: url("http://db.onlinewebfonts.com/t/5d649efd0c5c7b0f7fcca5962e781d6e.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/5d649efd0c5c7b0f7fcca5962e781d6e.woff2") format("woff2"),
+    url("http://db.onlinewebfonts.com/t/5d649efd0c5c7b0f7fcca5962e781d6e.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/5d649efd0c5c7b0f7fcca5962e781d6e.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/5d649efd0c5c7b0f7fcca5962e781d6e.svg#Salina") format("svg");
+
   font-size: 50px;
   float: left;
   width: 300px;
