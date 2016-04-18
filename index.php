@@ -56,14 +56,14 @@ function playSound(id, loop) {
 </head>
 <body onload="init();">
   	<nav class="navbar">
-		<a href="index.php"><img src="images/Desain_MenuUtama.png" class="header animated bounceInDown" ></a>
+		<a href="index.php"><img src="images/assets/Desain_MenuUtama.png" class="header animated bounceInDown" ></a>
 		<div class="header-content">
 			<div class="info-header">
 
 				<ul class="nav nav-pills menu-top animated flipInX" role="tablist">
 			      <li role="presentation" class="bg-tosca"><a href="?page=home">Home</a></li>
-			      <li role="presentation" class="bg-red"><a href="?page=home">Gallery</a></li>
-			      <li role="presentation" class="bg-navy"><a href="?page=home">How to Orders</a></li>
+			      <li role="presentation" class="bg-red"><a href="?page=galeri">Gallery</a></li>
+			      <li role="presentation" class="bg-navy"><a href="?page=cara-pemesanan">How to Orders</a></li>
 			      <li role="presentation" class="bg-red"><a href="?page=home">About us</a></li>
 
 			      <li role="presentation" class="dropdown bg-navy">
@@ -117,20 +117,20 @@ function playSound(id, loop) {
         </div>
         <div class="row">
         	<div class="col-md-12">
-        		<div class="desain-papercraft third-effect">
+        		<div class="desain-wooden third-effect">
         		<!-- <img src="images/Desain_MenuUtama1.png" class="banner-img"> -->
         			<div class="mask">
-        				<a class="banner-label">Papercraft</a>
+        				<a href="desainWooden.html" class="banner-label">Wooden Toys</a>
         			</div>
         		</div>
 	        </div>
         </div>
         <div class="row">
         	<div class="col-md-12">
-        		<div class="desain-papercraft third-effect">
+        		<div class="desain-popup third-effect">
         		<!-- <img src="images/Desain_MenuUtama1.png" class="banner-img"> -->
         			<div class="mask">
-        				<a class="banner-label">Papercraft</a>
+        				<a class="banner-label">Popup Tube</a>
         			</div>
         		</div>
 	        </div>

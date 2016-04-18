@@ -368,13 +368,36 @@ left: 55px;
 
 .desain-papercraft{
 height: 150px;
-background: url('../images/cara_pemesanan.jpg');
+background: url('../images/banner/bannerPaper.jpg');
 /*padding: 35px 0px 0px 0px;*/
 background-size: 100% 150px;
 overflow: hidden;
 }
 
 .desain-papercraft:hover{
+
+}
+.desain-wooden{
+height: 150px;
+background: url('../images/banner/bannerWooden.jpg');
+/*padding: 35px 0px 0px 0px;*/
+background-size: 100% 150px;
+overflow: hidden;
+}
+
+.desain-wooden:hover{
+
+}
+
+.desain-popup{
+height: 150px;
+background: url('../images/banner/bannerPopup.jpg');
+/*padding: 35px 0px 0px 0px;*/
+background-size: 100% 150px;
+overflow: hidden;
+}
+
+.desain-popup:hover{
 
 }
 .banner-label{
