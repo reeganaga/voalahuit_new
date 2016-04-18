@@ -55,7 +55,7 @@ function playSound(id, loop) {
 </head>
 <body onload="init();">
   	<nav class="navbar">
-		<a href="index.php"><img src="images/Desain_MenuUtama.png" class="header animated bounceInDown" ></a>
+		<a href="index.php"><img src="images/assets/Desain_MenuUtama.png" class="header animated bounceInDown" ></a>
 		<div class="header-content">
 			<div class="info-header">
 
@@ -116,7 +116,7 @@ function playSound(id, loop) {
         </div>
         <div class="row">
         	<div class="col-md-12">
-        		<div class="desain-papercraft third-effect">
+        		<div class="desain-wooden third-effect">
         		<!-- <img src="images/Desain_MenuUtama1.png" class="banner-img"> -->
         			<div class="mask">
         				<a href="desainWooden.html" class="banner-label">Wooden Toys</a>
@@ -126,7 +126,7 @@ function playSound(id, loop) {
         </div>
         <div class="row">
         	<div class="col-md-12">
-        		<div class="desain-papercraft third-effect">
+        		<div class="desain-popup third-effect">
         		<!-- <img src="images/Desain_MenuUtama1.png" class="banner-img"> -->
         			<div class="mask">
         				<a class="banner-label">Popup Tube</a>
