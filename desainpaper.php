@@ -2,7 +2,7 @@
 
 
 <!-- Small modal -->
-
+<a href="" data-toggle="modal" data-target="#myModal" data-remote="false">coba dialog</a>
 <div id="myModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -32,27 +32,29 @@
 	        <div class="col-md-6">
 	        	<form class="form">
 	        		<div class="form-group">
-	        			<input type="text" class="form-control" required="required" placeholder="Nama"></input>
+	        			<label class="label-control">Nama</label>
+	        			<input type="text" class="form-control btn-flat" required="required" placeholder="Masukkan Nama Lengkap"></input>
 	        		</div>
 	        		<div class="form-group">
-	        			<input type="text" class="form-control" required="required" placeholder="No HP"></input>
+	        			<label class="label-control">No Hp</label>
+	        			<input type="text" class="form-control btn-flat" required="required" placeholder="0856xxxxxxxx"></input>
 	        		</div>
 	        		<div class="form-group">
-	        			<input type="text" class="form-control" required="required" placeholder="Alamat"></input>
+	        			<label class="label-control">Email</label>
+	        			<input type="email" class="form-control btn-flat" required="required" placeholder="Email"></input>
+	        		</div>
+
+	        		<div class="form-group">
+	        			<label class="label-control">Alamat</label>
+	        			<textarea class="form-control btn-flat" required="required" placeholder="Masukkan alamat lengkap anda"></textarea> 
 	        		</div>
 	        		<div class="form-group">
-	        			<input type="email" class="form-control" required="required" placeholder="Email"></input>
+	        			<label class="label-control">Ucapan</label>
+	        			<input type="text" class="form-control btn-flat" required="required" placeholder="Ucapan ex: HBD Istriku tercinta"></input>
 	        		</div>
 	        		<div class="form-group">
-	        			<input type="text" class="form-control" required="required" placeholder="Kota Tempat Tinggal"></input>
-	        		</div>
-	        		<div class="form-group">
-	        			<select class="form-control">
-	        				<option>-- Metode Pembayaran --</option>
-	        				<option>BCA</option>
-	        				<option>Mandiri</option>
-	        				<option>BNI</option>
-	        			</select>
+	        			<!-- <input type="submit" value="Lanjutkan Pemesanan" class="btn btn-success btn-flat form-control"></input> -->
+	        			<a href="?page=pembayaran" value="Lanjutkan Pemesanan" class="btn btn-success btn-flat form-control">Lanjutkan Pemesanan</a>
 	        			<!-- <input type="text" class="form-control" required="required" placeholder="Metode Pembayaran"></input> -->
 	        		</div>
 	        			
@@ -64,10 +66,6 @@
 	        
         <!-- <div id="rambut"><img src=""></div> -->
         
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success btn-flat">Lanjutkan Pemesanan</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

@@ -415,3 +415,9 @@ text-align: center;
   margin-bottom: 15px;
   margin-top: 15px;
 }
+.select2-container--default .select2-selection--single{
+border: 1px solid #d2d6de !important;
+border-radius: 0 !important;
+/*padding: 6px 12px !important;*/
+height: 34px !important;
+}

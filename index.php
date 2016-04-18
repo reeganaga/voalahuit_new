@@ -6,12 +6,13 @@
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.sass">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
 
 	<!-- google font -->
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
-	<script src="js/jquery-1.9.0.js"></script>
+	<script src="js/jQuery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/createjs-2015.11.26.min.js"></script>
 	<script src="desainPaper.js?1459339718380"></script>
