@@ -9,7 +9,9 @@
 								<input type="text" required="" class="form-control btn-flat" placeholder="Masukkan Kode Token "></input>
 							</div>
 							<div class="form-group">
-								<input type="submit" required="" class="form-control btn btn-primary btn-flat" value="Konfirmasi & Cek Status"></input>
+								<!-- <input type="submit" required="" class="form-control btn btn-primary btn-flat" value="Konfirmasi & Cek Status"></input> -->
+								<a href="?page=detail_transaksi" class="form-control btn btn-primary btn-flat">Konfirmasi & Cek Status</a>
+
 							</div>
 						</form>
 						<form id="formcek" class="form" action="" style="display: none;">
@@ -17,7 +19,7 @@
 								<input type="text" class="form-control btn-flat" placeholder="Masukkan kode transaksi "></input>
 							</div>
 							<div class="form-group">
-								<input type="submit" class="form-control btn btn-success btn-flat" value="Check Your Gift"></input>
+								<!-- <input type="submit" class="form-control btn btn-success btn-flat" value="Check Your Gift"></input> -->
 							</div>
 						</form>
  						<i><small>*Masukkan kode token yang anda peroleh dari email untuk melakukan konfirmasi dan melihat status pemesanan anda</small></i>

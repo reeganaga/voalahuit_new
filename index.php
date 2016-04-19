@@ -7,6 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="css/custom.sass">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/font-awesome/css/font-awesome.min.css">
+  	<link rel="stylesheet" type="text/css" href="plugins/lightbox/css/lightbox.min.css">
 
 	<!-- google font -->
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
@@ -144,4 +146,7 @@ function playSound(id, loop) {
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+  <script src="plugins/lightbox/js/lightbox-plus-jquery.min.js"></script>
+
 </html>

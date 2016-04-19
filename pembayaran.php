@@ -4,7 +4,7 @@
  					<div class="box-header">Desain</div>
  					<div class="box-body">
 						<div class="papercraft-jadi">
-			        		<div id="base_paper"><img src="images/base_clear.PNG"></div>
+			        		<div id="base_paper"><img src="images/assets/basePaper-skin7.jpg"></div>
 					        <div id="rambut"><img src="images/rambut/h01.png"></div>
 					        <!-- <div id="kulit"><img src="images/kulit/h01.png"></div> -->
 					        <div id="mata"><img src="images/mata/e01.png"></div>

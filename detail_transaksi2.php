@@ -65,7 +65,7 @@
 							</tr>
 							<tr>
 								<td width="30%">Status</td>
-								<td width="70%"><div class="btn btn-warning btn-flat">Pending</div></td>
+								<td width="70%"><div class="btn btn-success btn-flat">Terbayar</div></td>
 							</tr>
 							<tr>
 								<td width="30%">No Resi</td>
@@ -88,9 +88,12 @@
 								<td width="70%" ><strong>Total</strong><strong class="pull-right">Rp 120.000,00</strong></td>
 							</tr>
 						</table>
+						
+						 <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-1.jpg" data-lightbox="example-1"><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-1.jpg" alt="image-1" /></a>
+						 
 						<form class="form">
 							<div class="form-group">
-								<label class="label-control">Upload Bukti Pembayaran</label>
+								<label class="label-control" >Upload Bukti Pembayaran</label>
 								<input type="file" class=""></input>
 							</div>
 							<div class="form-group">

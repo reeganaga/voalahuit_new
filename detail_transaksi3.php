@@ -65,11 +65,11 @@
 							</tr>
 							<tr>
 								<td width="30%">Status</td>
-								<td width="70%"><div class="btn btn-warning btn-flat">Pending</div></td>
+								<td width="70%"><div class="btn btn-success btn-flat">Barang Dikirim</div></td>
 							</tr>
 							<tr>
 								<td width="30%">No Resi</td>
-								<td width="70%"></td>
+								<td width="70%">123456789 <i><small><a target="_blank" href="http://www.cekresi.com/">Silahkan cek</a></small></i></td>
 							</tr>
 							<tr>
 								<td width="30%">&nbsp;</td>
