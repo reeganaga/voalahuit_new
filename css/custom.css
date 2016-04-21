@@ -282,7 +282,7 @@ div.galeri:nth-child(8){ animation-delay: 4s }
 
 /*tampilan papercraft jadi*/
 #rambut,#mata,#hidung,#mulut,#alis,#baju,#celana,#sepatu,#kacamata,#topi,#base_paper{
-  position: relative;
+  position: absolute;
 }
 #base_paper{
 top: 150px;
@@ -292,42 +292,43 @@ left: 40px;
   width: 300px;
 }
 #rambut{
-top: -302px;
+top: 165px;
 left: 54px;
 }
 #rambut img{
   width: 270px;
 }
 #mata{
-top: -370px;
-left: 77px;
+top: 170px;
+left: 55px;
+z-index: 100;
 }
 #mata img{
   width: 220px;
 }
 #hidung{
-top: -400px;
+top: 260px;
 left: 160px;
 }
 #hidung img{
   width: 50px;
 }
 #mulut{
-top: -404px;
+top: 334px;
 left: 110px;
 }
 #mulut img{
   width: 160px;
 }
 #alis{
-top: -550px;
+top: 205px;
 left: 60px;
 }
 #alis img{
   width: 250px;
 }
 #baju{
-top: -440px;
+top: 383px;
 left: 70px;
 z-index: 100;
 }
@@ -335,15 +336,15 @@ z-index: 100;
   width: 245px;
 }
 #celana{
-top: -450px;
+top: 490px;
 left: 125px;
 }
 #celana img{
   width: 135px;
 }
 #sepatu{
-top: -460px;
-left: 125px;
+top: 555px;
+left: 121px;
 }
 #sepatu img{
   width: 140px;
@@ -356,8 +357,9 @@ left: 55px;
   width: 270px;
 }
 #topi{
-top: -1110px;
+top: -40px;
 left: 55px;
+z-index: 100;
 }
 #topi img{
   width: 250px;

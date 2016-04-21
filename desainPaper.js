@@ -4280,15 +4280,16 @@ p.nominalBounds = new cjs.Rectangle(0,0,155,353);
 		
 		this.btn_save.on("click", function () {
 			if (namaKulit == "" || namaRambut == "" || namaMata == "" || namaHidung == "" || namaMulut == "" || namaAlis == "" || namaBaju == "" || namaCelana == "" || namaTopi == "" || namaKacamata == "") {
-				// alert("Data Belum lengkap");
+				alert("Data Belum lengkap");
 
 
 			} else {
-				//$('#myModal').modal('show');
+				// $('#myModal').modal('show');
 				$('#myModal').on('show.bs.modal', function (event) {
 				  var modal = $(this)
 
 				  modal.find('.modal-title').text('Pemesanan ' + namaKulit)
+				  $('#base_paper img').attr('src', 'images/assets/basePaper-'+namaKulit+'.jpg') 
 				  $('#rambut img').attr('src', 'images/rambut/'+namaRambut+'.png') 
 				  $('#mata img').attr('src', 'images/mata/'+namaMata+'.png') 
 				  $('#hidung img').attr('src', 'images/hidung/'+namaHidung+'.png') 
@@ -4299,6 +4300,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,155,353);
 				  $('#sepatu img').attr('src', 'images/sepatu/'+namaSepatu+'.png') 
 				  $('#topi img').attr('src', 'images/topi/'+namaTopi+'.png') 
 				  $('#kacamata img').attr('src', 'images/kacamata/'+namaKacamata+'.png') 
+
 				  // modal.find('.modal-body rambut').val(recipient)
 				})
 				$('#myModal').modal('show');

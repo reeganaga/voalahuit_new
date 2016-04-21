@@ -14,9 +14,12 @@
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
-	<script src="js/jQuery-2.1.4.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/createjs-2015.11.26.min.js"></script>
+	<!-- <script src="js/jQuery-2.1.4.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+	<!-- <script src="js/bootstrap.min.js"></script> -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<!-- <script src="js/createjs-2015.11.26.min.js"></script> -->
+	<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 	<script src="desainPaper.js?1459339718380"></script>
 
 <script>
@@ -147,6 +150,6 @@ function playSound(id, loop) {
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-  <script src="plugins/lightbox/js/lightbox-plus-jquery.min.js"></script>
+  <!-- <script src="plugins/lightbox/js/lightbox-plus-jquery.min.js"></script> -->
 
 </html>

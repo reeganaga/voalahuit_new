@@ -15,7 +15,9 @@
         <div class="row">
         	<div class="col-md-6">
 	        	<div class="papercraft-jadi">
-	        		<div id="base_paper"><img src="images/assets/basePaper.jpg"></div>
+	        		<div id="base_paper"><img src=""></div>
+			        <div id="topi"><img src=""></div>
+			        <div id="kacamata"><img src=""></div>		        		
 			        <div id="rambut"><img src=""></div>
 			        <!-- <div id="kulit"><img src="images/kulit/h01.png"></div> -->
 			        <div id="mata"><img src=""></div>
@@ -25,8 +27,6 @@
 			        <div id="baju"><img src=""></div>
 			        <div id="celana"><img src=""></div>
 			        <div id="sepatu"><img src=""></div>
-			        <div id="topi"><img src=""></div>
-			        <div id="kacamata"><img src=""></div>	
 		        </div>
 	        </div>
 	        <div class="col-md-6">
