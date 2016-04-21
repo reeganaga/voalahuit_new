@@ -299,9 +299,9 @@ left: 54px;
   width: 270px;
 }
 #mata{
-top: 170px;
-left: 55px;
-z-index: 100;
+    top: 245px;
+    left: 78px;
+    z-index: 100;
 }
 #mata img{
   width: 220px;
@@ -350,8 +350,9 @@ left: 121px;
   width: 140px;
 }
 #kacamata{
-top: -1180px;
-left: 55px;
+    top: 170px;
+    left: 55px;
+    z-index: 1000;
 }
 #kacamata img{
   width: 270px;

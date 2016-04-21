@@ -67,10 +67,8 @@ function playSound(id, loop) {
 
 				<ul class="nav nav-pills menu-top animated flipInX" role="tablist">
 			      <li role="presentation" class="bg-tosca"><a href="?page=home">Home</a></li>
-			      <li role="presentation" class="bg-red"><a href="?page=galeri">Gallery</a></li>
 			      <li role="presentation" class="bg-navy"><a href="?page=cara-pemesanan">How to Orders</a></li>
-			      <li role="presentation" class="bg-red"><a href="?page=home">About us</a></li>
-
+			      
 			      <li role="presentation" class="dropdown bg-navy">
 			        <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 			          Transaction
