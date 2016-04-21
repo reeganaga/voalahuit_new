@@ -48,7 +48,7 @@
  			</div>
  			<div class="col-md-6 animated zoomInRight" id="content-home">
  				<div class="box-video">
- 					<iframe width="460" height="215" class="shadow-bottom " src="https://www.youtube.com/embed/m-uYZmOmKpc" frameborder="0" allowfullscreen></iframe>
+ 					<iframe width="460" height="215" class="shadow-bottom center-block" src="https://www.youtube.com/embed/m-uYZmOmKpc" frameborder="0" allowfullscreen></iframe>
  				</div>
  			</div>
  		</div>
