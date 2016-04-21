@@ -34,6 +34,7 @@ function init() {
 	loader.installPlugin(createjs.Sound);
 	loader.addEventListener("fileload", handleFileLoad);
 	loader.addEventListener("complete", handleComplete);
+	loader.addEventListener("progress", handleProgress);
 	loader.loadManifest(lib.properties.manifest);
 }
 
@@ -51,8 +52,12 @@ function handleComplete(evt) {
 
 	createjs.Ticker.setFPS(lib.properties.fps);
 	createjs.Ticker.addEventListener("tick", stage);
-}
 
+	console.log("complete");
+}
+function handleProgress(evt){
+	console.log(evt.progress);
+}
 
 function playSound(id, loop) {
 	return createjs.Sound.play(id, createjs.Sound.INTERRUPT_EARLY, 0, 0, loop);
