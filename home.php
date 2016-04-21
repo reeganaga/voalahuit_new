@@ -1,5 +1,5 @@
 		<div class="row">
- 			<div class="col-md-6 animated zoomInLeft" id="content-home">
+ 			<div class="col-md-6 animated zoomInLeft" id="content-home" style="z-index: 500;">
 
  				<ul class="menu-home center-block">
  					<a href="" data-toggle="modal" data-target="#pilihdesain" data-remote="false">
@@ -48,10 +48,7 @@
  			</div>
  			<div class="col-md-6 animated zoomInRight" id="content-home">
  				<div class="box-video">
- 					<video width="700" controls class="shadow-bottom img-thumbnail">
- 					<source src="videos/voala.mp4" type="video/mp4">
- 				</video>
+ 					<iframe width="460" height="215" class="shadow-bottom " src="https://www.youtube.com/embed/m-uYZmOmKpc" frameborder="0" allowfullscreen></iframe>
  				</div>
- 				
  			</div>
  		</div>

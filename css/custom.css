@@ -3,25 +3,27 @@
     src: url(../fonts/salinaregular.ttf);
 }
 .header{
-	height: 200px;
-	position: absolute;
-  animation-delay: 0.5s;
-	animation-duration: 3s;
+/*height: 200px;*/ */
+    /* position: absolute; */
+    animation-delay: 0.5s;
+    animation-duration: 3s;
+    width: 40%;
+    float: left;
 }
 
 #content-home{
-	animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 .header-content{
-/*background: #9E9E9E none repeat scroll 0% 0%;*/
-/*min-height: 75px;*/
-float: right;
-width: 100%;
+    /* background: #9E9E9E none repeat scroll 0% 0%; */
+    /* min-height: 75px; */
+    float: right;
+    width: 60%;
 }
 .info-header{
     float: right;
-    width: 40%;
+    /* width: 40%; */
     margin-top: 25px;
 }
 .input-header, .input-header-bottom{
@@ -41,7 +43,7 @@ body{
   background: radial-gradient(circle,#fff 5%,rgb(219, 219, 219) 50%); /* Standard syntax */
 }
 .content-custom{
-	margin-top: 170px;
+  margin-top: 170px;
 }
 .menu-home{
 text-decoration: none;
@@ -51,6 +53,13 @@ width: 70%;
 transition: all 0.3 ease;
 }
 
+.menu-home a{
+  float: left;
+}
+
+.z-index-minus{
+  z-index: -50;
+}
 .menu-home li{
 
   font-family: 'salinaregular', serif;
@@ -75,23 +84,23 @@ font-size: 1.5em;
 }
 
 .menu-home li:hover{
-	opacity: 0.7;
-	/*background: blue !important;*/
-	transition: opacity 0.1s ease-in;
+  opacity: 0.7;
+  /*background: blue !important;*/
+  transition: opacity 0.1s ease-in;
 
 }
 
 .bg-red{
-	background: #F36D4A;
+  background: #F36D4A;
 }
 .bg-tosca{
-	background: #75E1B7;
+  background: #75E1B7;
 }
 .bg-navy{
-	background: #6A818F;
+  background: #6A818F;
 }
 .icon-menu{
-	margin-right: 10px;
+  margin-right: 10px;
 }
 
 .shadow-bottom{
@@ -100,6 +109,7 @@ font-size: 1.5em;
 
 .box-video{
   margin-right: 100px;
+  z-index: -50;
 }
 
 .menu-top{
