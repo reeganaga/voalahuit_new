@@ -157,8 +157,8 @@ float: left;
     margin-top: 10px;
 }
 .papercraft{
-  margin-top:-250px !important;
-  background: none !important;
+    margin-top: 10px !important;
+    background: none !important;
 }
 .navbar{
   z-index: 100;
@@ -497,3 +497,8 @@ font-size: 1.5em !important;
   top: -16px;
   width: 32px;
 } 
+.tool-papercraft{
+  width: 6%;
+    float: left;
+    margin: 5px;
+}

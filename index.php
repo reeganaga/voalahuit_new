@@ -19,8 +19,8 @@
 	<!-- <script src="js/bootstrap.min.js"></script> -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<!-- <script src="js/createjs-2015.11.26.min.js"></script> -->
-	<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-	<script src="desainPaper.js?1459339718380"></script>
+	<script src="js/createjs-2015.11.26.min.js"></script>
+	<script src="desainPaper.js"></script>
 
 <script>
 var canvas, stage, exportRoot;
