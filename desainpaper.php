@@ -1,13 +1,13 @@
 	<div class="row">
 		<div class="col-md-12">
 			<a class="no-padding" href="">
-			<img  class="tool-papercraft img-responsive animated fadeInUp content" src="images/male.png">
+			<img  class="tool-papercraft img-responsive animated fadeInUp content" src="images/male.svg">
 			</a>
 			<a class=" no-padding" href="">
-			<img  class="tool-papercraft img-responsive animated fadeInUp content" src="images/female.png">
+			<img  class="tool-papercraft img-responsive animated fadeInUp content" src="images/female.svg">
 			</a>
 			<a class="" href="">
-			<img  style="width: 12% !important;" class="tool-papercraft img-responsive animated fadeInUp content" src="images/save.png" onclick="testClick()">
+			<img  style="width: 12% !important;" class="tool-papercraft img-responsive animated fadeInUp content" src="images/save.svg" onclick="testClick()">
 			</a>
 <script type="text/javascript">
 	function testClick(){

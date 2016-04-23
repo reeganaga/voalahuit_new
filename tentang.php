@@ -4,7 +4,7 @@
 
 <div class="row">
 	<div class="judul text-center animated fadeInDown">
-	<h2>aksdljasdjkalsjdl</h2>
+	<h3>QuiCraft adalah aplikasi yang berbasis media interaktif yang dikembangkan oleh tim "Quilo"</h3>
 		
 	</div>
 </div>
