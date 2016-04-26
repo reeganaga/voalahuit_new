@@ -129,7 +129,7 @@ function playSound(id, loop) {
         		<div class="desain-wooden third-effect">
         		<!-- <img src="images/Desain_MenuUtama1.png" class="banner-img"> -->
         			<div class="mask">
-        				<a href="desainWooden.html" class="banner-label">Wooden Toys</a>
+        				<a href="desainWooden.php" class="banner-label">Wooden Toys</a>
         			</div>
         		</div>
 	        </div>

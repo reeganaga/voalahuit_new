@@ -43,7 +43,7 @@ body{
   background: radial-gradient(circle,#fff 5%,rgb(219, 219, 219) 50%); /* Standard syntax */
 }
 .content-custom{
-  margin-top: 30px;
+  margin-top: 90px;
 }
 .menu-home{
     text-decoration: none;
