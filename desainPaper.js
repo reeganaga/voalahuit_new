@@ -4288,7 +4288,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,155,353);
 				$('#myModal').on('show.bs.modal', function (event) {
 				  var modal = $(this)
 
-				  modal.find('.modal-title').text('Pemesanan ' + namaKulit)
+				  modal.find('.modal-title').text('Pemesanan Papercraft')
 				  $('#base_paper img').attr('src', 'images/assets/basePaper-'+namaKulit+'.jpg') 
 				  $('#rambut img').attr('src', 'images/rambut/'+namaRambut+'.png') 
 				  $('#mata img').attr('src', 'images/mata/'+namaMata+'.png') 
