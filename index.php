@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Voala Huit</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.sass">
@@ -19,8 +20,8 @@
 	<!-- <script src="js/bootstrap.min.js"></script> -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<!-- <script src="js/createjs-2015.11.26.min.js"></script> -->
-	<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-	<script src="desainPaper.js?1459339718380"></script>
+	<script src="js/createjs-2015.11.26.min.js"></script>
+	<script src="desainPaper.js"></script>
 
 <script>
 var canvas, stage, exportRoot;
@@ -128,7 +129,7 @@ function playSound(id, loop) {
         		<div class="desain-wooden third-effect">
         		<!-- <img src="images/Desain_MenuUtama1.png" class="banner-img"> -->
         			<div class="mask">
-        				<a href="desainWooden.html" class="banner-label">Wooden Toys</a>
+        				<a href="desainWooden.php" class="banner-label">Wooden Toys</a>
         			</div>
         		</div>
 	        </div>

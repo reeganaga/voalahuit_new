@@ -1,8 +1,53 @@
-	<canvas class="papercraft animated fadeInUp content" id="canvas" width="1360" height="720"  ></canvas>
+	<div class="row">
+		<div class="col-md-12">
+			<a class="no-padding" href="">
+			<img  class="tool-papercraft img-responsive animated fadeInUp content" src="images/male.svg">
+			</a>
+			<a class=" no-padding" href="">
+			<img  class="tool-papercraft img-responsive animated fadeInUp content" src="images/female.svg">
+			</a>
+			<a class="" href="">
+			<img  style="width: 12% !important;" class="tool-papercraft img-responsive animated fadeInUp content" src="images/save.svg" onclick="testClick()">
+			</a>
+<script type="text/javascript">
+	function testClick(){
+		if (namaKulit == "" || namaRambut == "" || namaMata == "" || namaHidung == "" || namaMulut == "" || namaAlis == "" || namaBaju == "" || namaCelana == "") {
+				alert("Data Belum lengkap");
+
+
+			} else {
+				// $('#myModal').modal('show');
+				$('#myModal').on('show.bs.modal', function (event) {
+				  var modal = $(this)
+
+				  modal.find('.modal-title').text('Pemesanan ' + namaKulit)
+				  $('#base_paper img').attr('src', 'images/assets/basePaper-'+namaKulit+'.jpg') 
+				  $('#rambut img').attr('src', 'images/rambut/'+namaRambut+'.png') 
+				  $('#mata img').attr('src', 'images/mata/'+namaMata+'.png') 
+				  $('#hidung img').attr('src', 'images/hidung/'+namaHidung+'.png') 
+				  $('#mulut img').attr('src', 'images/mulut/'+namaMulut+'.png') 
+				  $('#alis img').attr('src', 'images/alis/'+namaAlis+'.png') 
+				  $('#baju img').attr('src', 'images/baju/'+namaBaju+'.png') 
+				  $('#celana img').attr('src', 'images/celana/'+namaCelana+'.png') 
+				  $('#sepatu img').attr('src', 'images/sepatu/'+namaSepatu+'.png') 
+				  $('#topi img').attr('src', 'images/topi/'+namaTopi+'.png') 
+				  $('#kacamata img').attr('src', 'images/kacamata/'+namaKacamata+'.png') 
+
+				  // modal.find('.modal-body rambut').val(recipient)
+				})
+				$('#myModal').modal('show');
+
+				//alert("kulit" + namaKulit + "\nrambut:" + namaRambut + "\nmata:" + namaMata + "\nHidung:" + namaHidung + "\nmulut:" + namaMulut + "\nalis:" + namaAlis + "\nbaju:" + namaBaju + "\ncelana:" + namaCelana + "\ntopi:" + namaTopi + "\nkacamata:" + namaKacamata + "");
+			}
+	}
+</script>			
+		</div>
+	</div>
+	<canvas class="papercraft animated fadeInUp content" id="canvas" width="1360" height="367"  ></canvas>
+		
 
 
 <!-- Small modal -->
-<a href="" data-toggle="modal" data-target="#myModal" data-remote="false">coba dialog</a>
 <div id="myModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
