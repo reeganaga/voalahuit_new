@@ -30,31 +30,41 @@
 		        </div>
 	        </div>
 	        <div class="col-md-6">
-	        	<form class="form">
+	        	<form class="form" action="prosespesan.php" method="post">
 	        		<div class="form-group">
 	        			<label class="label-control">Nama</label>
-	        			<input type="text" class="form-control btn-flat" required="required" placeholder="Masukkan Nama Lengkap"></input>
+	        			<input name="nama" type="text" class="form-control btn-flat" required="required" placeholder="Masukkan Nama Lengkap"></input>
 	        		</div>
 	        		<div class="form-group">
 	        			<label class="label-control">No Hp</label>
-	        			<input type="text" class="form-control btn-flat" required="required" placeholder="0856xxxxxxxx"></input>
+	        			<input name="no_hp" type="text" class="form-control btn-flat" required="required" placeholder="0856xxxxxxxx"></input>
 	        		</div>
 	        		<div class="form-group">
 	        			<label class="label-control">Email</label>
-	        			<input type="email" class="form-control btn-flat" required="required" placeholder="Email"></input>
+	        			<input name="email" type="email" class="form-control btn-flat" required="required" placeholder="Email"></input>
 	        		</div>
 
 	        		<div class="form-group">
 	        			<label class="label-control">Alamat</label>
-	        			<textarea class="form-control btn-flat" required="required" placeholder="Masukkan alamat lengkap anda"></textarea> 
+	        			<textarea name="alamat" class="form-control btn-flat" required="required" placeholder="Masukkan alamat lengkap anda"></textarea> 
 	        		</div>
 	        		<div class="form-group">
 	        			<label class="label-control">Ucapan</label>
-	        			<input type="text" class="form-control btn-flat" required="required" placeholder="Ucapan ex: HBD Istriku tercinta"></input>
+	        			<input ucapan type="text" class="form-control btn-flat" required="required" placeholder="Ucapan ex: HBD Istriku tercinta"></input>
 	        		</div>
 	        		<div class="form-group">
-	        			<!-- <input type="submit" value="Lanjutkan Pemesanan" class="btn btn-success btn-flat form-control"></input> -->
-	        			<a href="?page=pembayaran" value="Lanjutkan Pemesanan" class="btn btn-success btn-flat form-control">Lanjutkan Pemesanan</a>
+	        			<input name="f_rambut" type="text" id="f_rambut"></input>
+	        			<input name="f_mata" type="text" id="f_rambut"></input>
+	        			<input name="f_hidung" type="text" id="f_rambut"></input>
+	        			<input name="f_mulut" type="text" id="f_rambut"></input>
+	        			<input name="f_alis" type="text" id="f_rambut"></input>
+	        			<input name="f_baju" type="text" id="f_rambut"></input>
+	        			<input name="f_celana" type="text" id="f_rambut"></input>
+	        			<input name="f_sepatu" type="text" id="f_rambut"></input>
+	        			<input name="f_topi" type="text" id="f_rambut"></input>
+	        			<input name="f_kacamata" type="text" id="f_rambut"></input>
+	        			<input type="submit" value="Lanjutkan Pemesanan" class="btn btn-success btn-flat form-control"></input>
+	        			<!-- <a href="?page=pembayaran" value="Lanjutkan Pemesanan" class="btn btn-success btn-flat form-control">Lanjutkan Pemesanan</a> -->
 	        			<!-- <input type="text" class="form-control" required="required" placeholder="Metode Pembayaran"></input> -->
 	        		</div>
 	        			
