@@ -4,18 +4,18 @@
  					<div class="box-header">Desain</div>
  					<div class="box-body">
 						<div class="papercraft-jadi">
-			        		<div id="base_paper"><img src="images/assets/basePaper-skin7.jpg"></div>
-					        <div id="rambut"><img src="images/rambut/h01.png"></div>
+			        		<div id="base_paper"><img src="images/assets/basePaper-<?php echo $_SESSION['qc']['kulit'];?>.jpg"></div>
+					        <div id="rambut"><img src="images/rambut/<?php echo $_SESSION['qc']['rambut'];?>.png"></div>
 					        <!-- <div id="kulit"><img src="images/kulit/h01.png"></div> -->
-					        <div id="mata"><img src="images/mata/e01.png"></div>
-					        <div id="hidung"><img src="images/hidung/n01.png"></div>
-					        <div id="mulut"><img src="images/mulut/m01.png"></div>
-					        <div id="alis"><img src="images/alis/eb01.png"></div>
-					        <div id="baju"><img src="images/baju/cl01.png"></div>
-					        <div id="celana"><img src="images/celana/pn01.png"></div>
-					        <div id="sepatu"><img src="images/sepatu/sh01.png"></div>
-					        <div id="topi"><img src="images/topi/hat01.png"></div>
-					        <div id="kacamata"><img src="images/kacamata/eyg01.png"></div>	
+					        <div id="mata"><img src="images/mata/<?php echo $_SESSION['qc']['mata'];?>.png"></div>
+					        <div id="hidung"><img src="images/hidung/<?php echo $_SESSION['qc']['hidung'];?>.png"></div>
+					        <div id="mulut"><img src="images/mulut/<?php echo $_SESSION['qc']['mulut'];?>.png"></div>
+					        <div id="alis"><img src="images/alis/<?php echo $_SESSION['qc']['alis'];?>.png"></div>
+					        <div id="baju"><img src="images/baju/<?php echo $_SESSION['qc']['baju'];?>.png"></div>
+					        <div id="celana"><img src="images/celana/<?php echo $_SESSION['qc']['celana'];?>.png"></div>
+					        <div id="sepatu"><img src="images/sepatu/<?php echo $_SESSION['qc']['sepatu'];?>.png"></div>
+					        <div id="topi"><img src="images/topi/<?php echo $_SESSION['qc']['topi'];?>.png"></div>
+					        <div id="kacamata"><img src="images/kacamata/<?php echo $_SESSION['qc']['kacamata'];?>.png"></div>	
 				        </div>						
  					</div>
  				</div>
@@ -27,25 +27,25 @@
 						<table class="table table-hover">
 							<tr>
 								<td width="30%">Nama</td>
-								<td width="70%"><input type="text" class="form-control btn-flat" value="Rega"></input></td>
+								<td width="70%"><input type="text" class="form-control btn-flat" value="<?php echo $_SESSION['qc']['nama']; ?>"></input></td>
 							</tr>
 							<tr>
 								<td width="30%">HP</td>
-								<td width="70%"><input type="text" class="form-control btn-flat" value="085xxxxxxxxx"></input></td>
+								<td width="70%"><input type="text" class="form-control btn-flat" value="<?php echo $_SESSION['qc']['no_hp'];?>"></input></td>
 							</tr>
 							<tr>
 								<td width="30%">Email</td>
-								<td width="70%"><input type="text" class="form-control btn-flat" value="rega.blank@gmail.com"></input></td>
+								<td width="70%"><input type="text" class="form-control btn-flat" value="<?php echo $_SESSION['qc']['email'];?>"></input></td>
 							</tr>
 							<tr>
 								<td width="30%">Alamat</td>
 								<td width="70%">
-									<textarea class="form-control btn-flat">Nitikan Uh 6 317 Yogyakarta</textarea>
+									<textarea class="form-control btn-flat"><?php echo $_SESSION['qc']['alamat'];?></textarea>
 								</td>
 							</tr>
 							<tr>
 								<td width="30%">Ucapan</td>
-								<td width="70%"><input type="text" class="form-control btn-flat" value="rega"></input></td>
+								<td width="70%"><input type="text" class="form-control btn-flat" value="<?php echo $_SESSION['qc']['ucapan'];?>"></input></td>
 							</tr>
 						</table>
 						<button class="btn-warning btn btn-flat" style="width: 100%">Ubah Data Diri</button>						
@@ -59,7 +59,7 @@
  					<div class="box-body">
  						<i style="color: red;">*pilih salah satu metode pembayaran</i>
 
- 						<form class="form" action="">
+ 						<form class="form" action="prosespesan.php" method="post">
 							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 							  <div class="panel panel-default btn-flat">
 							    <div class="panel-heading" role="tab" id="headingOne">
@@ -71,7 +71,7 @@
 							    </div>
 							    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 							      <div class="panel-body">
-							        <input type="radio" name="tranfer" value="bni">BNI</input>
+							        <input type="radio" name="tranfer" value="BNI">BNI</input>
 							      </div>
 							    </div>
 							  </div>
@@ -85,7 +85,7 @@
 							    </div>
 							    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 							      <div class="panel-body">
-							        <input type="radio" name="tranfer" value="bca">BCA</input>
+							        <input type="radio" name="tranfer" value="BCA">BCA</input>
 							        
 							      </div>
 							    </div>
@@ -100,7 +100,7 @@
 							    </div>
 							    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 							      <div class="panel-body">
-							        <input type="radio" name="tranfer" value="bni">BRI</input>
+							        <input type="radio" name="tranfer" value="BRI">BRI</input>
 							        
 							      </div>
 							    </div>
@@ -109,14 +109,15 @@
 
 							<div class="form-group">
 								<label class="label-control">Pilih Kota Tempat Tinggal</label>
-								<select id="kota" class="form-control select2 btn-flat" style="width: 100%;">
-			                      <option selected="selected" value="1">Jakarta</option>
-			                      <option value="2">Bandung</option>
-			                      <option value="3">Yogyakarta</option>
-			                      <option value="4">Denpasar</option>
-			                      <option value="5">Batu</option>
-			                      <option value="6">Blora</option>
-			                      <option value="7">Kulon Progo</option>
+								<select name="kota" id="kota" class="form-control select2 btn-flat" style="width: 100%;">
+								<?php 
+								$cekkota=mysql_query("SELECT * from kota");
+								while ($row=mysql_fetch_array($cekkota)) {
+									# code...
+								
+								 ?>
+			                      <option  value="<?php echo $row['id']; ?>"><?php echo $row['nama_kota']; ?></option>
+			                    <?php } ?>
 			                    </select>
 							</div>
 							<label>Detail Pembayaran</label>
@@ -134,8 +135,8 @@
 									<td><h3>Rp 120.000,00</h3></td>
 								</tr>
 							</table>
-							<!-- <button type="submit" class="btn btn-success btn-flat" style="width: 100%;">Pesan</button> -->
-							<a href="?page=sukses" class="btn btn-success btn-flat" style="width: 100%;">Pesan</a>
+							<button name="pesan2" type="submit" class="btn btn-success btn-flat" style="width: 100%;">Pesan</button>
+							<!-- <a href="?page=sukses" class="btn btn-success btn-flat" style="width: 100%;">Pesan</a> -->
 						</form>
  					</div>
  				</div>

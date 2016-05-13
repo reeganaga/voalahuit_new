@@ -50,20 +50,21 @@
 	        		</div>
 	        		<div class="form-group">
 	        			<label class="label-control">Ucapan</label>
-	        			<input ucapan type="text" class="form-control btn-flat" required="required" placeholder="Ucapan ex: HBD Istriku tercinta"></input>
+	        			<input name="ucapan" type="text" class="form-control btn-flat" required="required" placeholder="Ucapan ex: HBD Istriku tercinta"></input>
 	        		</div>
 	        		<div class="form-group">
-	        			<input name="f_rambut" type="text" id="f_rambut"></input>
-	        			<input name="f_mata" type="text" id="f_rambut"></input>
-	        			<input name="f_hidung" type="text" id="f_rambut"></input>
-	        			<input name="f_mulut" type="text" id="f_rambut"></input>
-	        			<input name="f_alis" type="text" id="f_rambut"></input>
-	        			<input name="f_baju" type="text" id="f_rambut"></input>
-	        			<input name="f_celana" type="text" id="f_rambut"></input>
-	        			<input name="f_sepatu" type="text" id="f_rambut"></input>
-	        			<input name="f_topi" type="text" id="f_rambut"></input>
-	        			<input name="f_kacamata" type="text" id="f_rambut"></input>
-	        			<input type="submit" value="Lanjutkan Pemesanan" class="btn btn-success btn-flat form-control"></input>
+	        			<input name="f_rambut" type="hidden" id="f_rambut"></input>
+	        			<input name="f_mata" type="hidden" id="f_mata"></input>
+	        			<input name="f_hidung" type="hidden" id="f_hidung"></input>
+	        			<input name="f_mulut" type="hidden" id="f_mulut"></input>
+	        			<input name="f_alis" type="hidden" id="f_alis"></input>
+	        			<input name="f_baju" type="hidden" id="f_baju"></input>
+	        			<input name="f_celana" type="hidden" id="f_celana"></input>
+	        			<input name="f_sepatu" type="hidden" id="f_sepatu"></input>
+	        			<input name="f_topi" type="hidden" id="f_topi"></input>
+	        			<input name="f_kacamata" type="hidden" id="f_kacamata"></input>
+	        			<input name="f_kulit" type="hidden" id="f_kulit"></input>
+	        			<input name="pesan" type="submit" value="Lanjutkan Pemesanan" class="btn btn-success btn-flat form-control"></input>
 	        			<!-- <a href="?page=pembayaran" value="Lanjutkan Pemesanan" class="btn btn-success btn-flat form-control">Lanjutkan Pemesanan</a> -->
 	        			<!-- <input type="text" class="form-control" required="required" placeholder="Metode Pembayaran"></input> -->
 	        		</div>

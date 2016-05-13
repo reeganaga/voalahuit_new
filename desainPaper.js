@@ -4301,6 +4301,20 @@ p.nominalBounds = new cjs.Rectangle(0,0,155,353);
 				  $('#topi img').attr('src', 'images/topi/'+namaTopi+'.png') 
 				  $('#kacamata img').attr('src', 'images/kacamata/'+namaKacamata+'.png') 
 
+				  //insert ke form
+				  $('#f_rambut').attr('value', namaRambut) 
+				  $('#f_mata').attr('value', namaMata) 
+				  $('#f_hidung').attr('value', namaHidung) 
+				  $('#f_mulut').attr('value', namaMulut) 
+				  $('#f_alis').attr('value', namaAlis) 
+				  $('#f_baju').attr('value', namaBaju) 
+				  $('#f_celana').attr('value', namaCelana) 
+				  $('#f_sepatu').attr('value', namaSepatu) 
+				  $('#f_topi').attr('value', namaTopi) 
+				  $('#f_kacamata').attr('value', namaKacamata) 
+				  $('#f_kulit').attr('value', namaKulit) 
+
+				  // modal.find('#f_rambut input').val(namaRambut)
 				  // modal.find('.modal-body rambut').val(recipient)
 				})
 				$('#myModal').modal('show');

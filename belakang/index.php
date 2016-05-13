@@ -1,3 +1,16 @@
+<?php 
+session_start();
+include '../config/db.php';
+if (isset($_SESSION['username'])) {
+  # code...
+
+if (isset($_POST['ubahstatus'])) {
+  //ubah status
+  mysql_query("UPDATE pemesanan set status='".$_POST['status']."' ,
+                      no_resi='".$_POST['resi']."' where id=".$_POST['id']);
+  echo "sukses";
+}
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,12 +25,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">    
     <!-- Theme style -->
     <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
 
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="../css/custom.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -33,7 +50,7 @@
         <nav class="navbar navbar-static-top">
           <div class="container">
             <div class="navbar-header">
-              <a href="../index2.html" class="navbar-brand"><b>Admin</b>LTE</a>
+              <a href="../index2.html" class="navbar-brand"><b>Quicraft </b>ADMIN</a>
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                 <i class="fa fa-bars"></i>
               </button>
@@ -42,10 +59,10 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Link</a></li>
+                <li class="active"><a href="#">Pemesanan <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Customer</a></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Laporan <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
@@ -163,15 +180,15 @@
                       <!-- The user image in the navbar-->
                       <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                       <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                      <span class="hidden-xs">Alexander Pierce</span>
+                      <span class="hidden-xs">Hi Admin</span>
                     </a>
                     <ul class="dropdown-menu">
                       <!-- The user image in the menu -->
                       <li class="user-header">
                         <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                         <p>
-                          Alexander Pierce - Web Developer
-                          <small>Member since Nov. 2012</small>
+                          Admin - Quicraft
+                          <small></small>
                         </p>
                       </li>
                       <!-- Menu Body -->
@@ -192,7 +209,7 @@
                           <a href="#" class="btn btn-default btn-flat">Profile</a>
                         </div>
                         <div class="pull-right">
-                          <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                          <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
                         </div>
                       </li>
                     </ul>
@@ -219,24 +236,98 @@
           </section>
 
           <!-- Main content -->
+          <?php 
+          $ambildata=mysql_query("SELECT * from pemesanan ");
+           ?>
           <section class="content">
-            <div class="callout callout-info">
-              <h4>Tip!</h4>
-              <p>Add the layout-top-nav class to the body tag to get this layout. This feature can also be used with a sidebar! So use this class if you want to remove the custom dropdown menus from the navbar and use regular links instead.</p>
-            </div>
-            <div class="callout callout-danger">
-              <h4>Warning!</h4>
-              <p>The construction of this layout differs from the normal one. In other words, the HTML markup of the navbar and the content will slightly differ than that of the normal layout.</p>
-            </div>
-            <div class="box box-default">
-              <div class="box-header with-border">
-                <h3 class="box-title">Blank Box</h3>
-              </div>
-              <div class="box-body">
-                The great content goes here
-              </div><!-- /.box-body -->
-            </div><!-- /.box -->
+              <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">Data Table With Full Features</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                  <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Status</th>
+                        <th>Token</th>
+                        <th>Nama</th>
+                        <th>Tanggal</th>
+                        <th>Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php while ($row=mysql_fetch_array($ambildata)) {
+                        # code...
+                       ?>
+                      <tr>
+                        <td><?php echo $row['id']; ?></td>
+                        <td><?php 
+                        if ($row['status']=='pending') {
+                          echo "<div class='label label-warning'>pending</div>";
+                        }elseif ($row['status']=='terbayar') {
+                          echo "<div class='label label-info'>terbayar</div>";
+                        }elseif ($row['status']=='dikerjakan') {
+                          echo "<div class='label label-primary'>dikerjakan</div>";
+                        }elseif ($row['status']=='dikirim') {
+                          echo "<div class='label label-success'>dikirim</div>";
+                        }
+                         ?></td>
+                        <td><?php echo $row['token']; ?></td>
+                        <td><?php echo $row['nama']; ?></td>
+                        <td><?php echo $row['tgl_pesan']; ?></td>
+                        <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" 
+                        data-whatever="@getbootstrap"
+                        data-id     ="<?php echo $row['id']; ?>"
+                        data-nama     ="<?php echo $row['nama']; ?>"
+                        data-nohp     ="<?php echo $row['no_hp']; ?>"
+                        data-email    ="<?php echo $row['email']; ?>"
+                        data-alamat   ="<?php echo $row['alamat']; ?>"
+                        data-ucapan   ="<?php echo $row['ucapan']; ?>"
+                        data-tglpesan ="<?php echo $row['tgl_pesan']; ?>"
+                        data-status   ="<?php echo $row['status']; ?>"
+                        data-bank     ="<?php echo $row['bank']; ?>"
+                        data-bukti    ="<?php echo $row['bukti']; ?>"
+                        data-resi    ="<?php echo $row['no_resi']; ?>"
+                        <?php 
+                        $id_pemesanan=$row['id'];
+                        $datapapercraft=mysql_query("SELECT * from pemesanan_papercraft where id_pemesanan=$id_pemesanan");
+                        while ($pc=mysql_fetch_array($datapapercraft)) {
+                          # code...
+                        
+                         ?>
+                        data-rambut   ="<?php echo $pc['rambut']; ?>"
+                        data-mata     ="<?php echo $pc['mata']; ?>"
+                        data-hidung   ="<?php echo $pc['hidung']; ?>"
+                        data-mulut    ="<?php echo $pc['mulut']; ?>"
+                        data-alis     ="<?php echo $pc['alis']; ?>"
+                        data-baju     ="<?php echo $pc['baju']; ?>"
+                        data-celana   ="<?php echo $pc['celana']; ?>"
+                        data-sepatu   ="<?php echo $pc['sepatu']; ?>"
+                        data-topi     ="<?php echo $pc['topi']; ?>"
+                        data-kacamata ="<?php echo $pc['kacamata'] ?>"
+                        data-kulit    ="<?php echo $pc['kulit']; ?>"
+                        <?php } ?>
+                        >
+                        <i class="fa fa-eye"></i>Lihat</a></button>
+                      </tr>
+                      <?php } ?>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th>No</th>
+                        <th>Status</th>
+                        <th>Token</th>
+                        <th>Nama</th>
+                        <th>Tanggal</th>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
           </section><!-- /.content -->
+
         </div><!-- /.container -->
       </div><!-- /.content-wrapper -->
       <footer class="main-footer">
@@ -249,10 +340,132 @@
       </footer>
     </div><!-- ./wrapper -->
 
+<!-- start modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Detail Pemesanan</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="papercraft-jadi">
+                  
+                  <div id="base_paper"><img src=""></div>
+                  <div id="rambut"><img src=""></div>
+                  <!-- <div id="kulit"><img src="images/kulit/h01.png"></div> -->
+                  <div id="mata"><img src=""></div>
+                  <div id="hidung"><img src=""></div>
+                  <div id="mulut"><img src=""></div>
+                  <div id="alis"><img src=""></div>
+                  <div id="baju"><img src=""></div>
+                  <div id="celana"><img src=""></div>
+                  <div id="sepatu"><img src=""></div>
+                  <div id="topi"><img src=""></div>
+                  <div id="kacamata"><img src=""></div> 
+                
+                </div>
+          </div>
+          <div class="col-md-6">
+            <table class="table">
+              <tr>
+                <td>Nama</td>
+                <td id="nama">isi</td>
+              </tr>
+              <tr>
+                <td>No Hp</td>
+                <td id="nohp">isi</td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td id="email">isi</td>
+              </tr>
+              <tr>
+                <td>Alamat</td>
+                <td id="alamat">isi</td>
+              </tr>
+              <tr>
+                <td>Ucapan</td>
+                <td id="ucapan">isi</td>
+              </tr>
+              <tr>
+                <td>Tgl Pesan</td>
+                <td id="tglpesan">isi</td>
+              </tr>
+              <tr>
+                <td>bank</td>
+                <td id="bank">isi</td>
+              </tr>
+              <tr>
+                <td>bukti</td>
+                <td id="bukti">
+                  <a href="" target="_blank">
+                    <img src="" class="img-responsive img-thumbnail" >
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>Status</td>
+                <td id="status"></td>
+              </tr>
+              <tr>
+                <td>No Resi</td>
+                <td id="resi"></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>
+                  <form class="form" method="post" action="">
+                    <div class="form-group">
+                      <select name="status" class="form-control">
+                        <option value="pending">pending</option>
+                        <option value="terbayar">terbayar</option>
+                        <option value="dikerjakan">dikerjakan</option>
+                        <option value="dikirim">dikirim</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <input name="resi" type="text" class="form-control" placeholder="Masukkan no Resi"></input>
+                    </div>
+                    <div class="form-group">
+                      <input class="id_pemesanan" type="hidden" name="id" value=""></input>
+                      <input type="submit" name="ubahstatus" value="Ubah Status" class="btn btn-success btn-flat"></input>
+                    </div>
+                  </form>
+                </tr>
+              </td>
+            </table>
+            <hr>
+          </div>
+        </div>
+<!--         <form>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form> -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
     <!-- jQuery 2.1.4 -->
     <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- Bootstrap 3.3.5 -->
     <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <!-- DataTables -->
+    <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>    
     <!-- SlimScroll -->
     <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
     <!-- FastClick -->
@@ -261,5 +474,83 @@
     <script src="../dist/js/app.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="../dist/js/demo.js"></script>
+        <!-- page script -->
+    <script>
+      $(function () {
+        $("#example1").DataTable();
+        $('#example2').DataTable({
+          "paging": true,
+          "lengthChange": false,
+          "searching": false,
+          "ordering": true,
+          "info": true,
+          "autoWidth": false
+        });
+      });
+    </script>
+
+    <script type="text/javascript">
+      $('#exampleModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        var id = button.data('id') // Extract info from data-* attributes
+        var nama      = button.data('nama')
+        var nohp      = button.data('nohp')
+        var email     = button.data('email')
+        var alamat    = button.data('alamat')
+        var ucapan    = button.data('ucapan')
+        var tglpesan  = button.data('tglpesan')
+        var status    = button.data('status')
+        var bank      = button.data('bank')
+        var bukti     = button.data('bukti')
+        var resi     = button.data('resi')
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        var modal = $(this)
+        // modal.find('.modal-title').text('New message to ' + recipient)
+        modal.find('.modal-body .id_pemesanan').val(id)
+        modal.find('#nama').text(nama)
+        modal.find('#nohp').text(nohp)
+        modal.find('#email').text(email)
+        modal.find('#alamat').text(alamat)
+        modal.find('#ucapan').text(ucapan)
+        modal.find('#tglpesan').text(tglpesan)
+        modal.find('#status').text(status)
+        modal.find('#bank').text(bank)
+        modal.find('#bukti a').attr('href','../uploads/bukti/'+bukti)
+        modal.find('#bukti a img').attr('src','../uploads/bukti/'+bukti)
+        modal.find('#resi').text(resi)
+        //untuk menampilkan desainpapercraft
+        var namaKulit     = button.data('kulit')
+        var namaRambut    = button.data('rambut')
+        var namaMata      = button.data('mata')
+        var namaHidung    = button.data('hidung')
+        var namaMulut     = button.data('mulut')
+        var namaAlis      = button.data('alis')
+        var namaBaju      = button.data('baju')
+        var namaCelana    = button.data('celana')
+        var namaSepatu    = button.data('sepatu')
+        var namaTopi      = button.data('topi')
+        var namaKacamata  = button.data('kacamata')
+
+          $('#base_paper img').attr('src', '../images/assets/basePaper-'+namaKulit+'.jpg') 
+          $('#rambut img').attr('src', '../images/rambut/'+namaRambut+'.png') 
+          $('#mata img').attr('src', '../images/mata/'+namaMata+'.png') 
+          $('#hidung img').attr('src', '../images/hidung/'+namaHidung+'.png') 
+          $('#mulut img').attr('src', '../images/mulut/'+namaMulut+'.png') 
+          $('#alis img').attr('src', '../images/alis/'+namaAlis+'.png') 
+          $('#baju img').attr('src', '../images/baju/'+namaBaju+'.png') 
+          $('#celana img').attr('src', '../images/celana/'+namaCelana+'.png') 
+          $('#sepatu img').attr('src', '../images/sepatu/'+namaSepatu+'.png') 
+          $('#topi img').attr('src', '../images/topi/'+namaTopi+'.png') 
+          $('#kacamata img').attr('src', '../images/kacamata/'+namaKacamata+'.png')         
+        })
+    </script>
   </body>
 </html>
+
+
+<?php 
+}else{
+header('Location:login.php');
+}
+?>
