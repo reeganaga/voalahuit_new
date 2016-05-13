@@ -67,7 +67,7 @@ function playSound(id, loop) {
 </head>
 <body onload="init();">
   	<nav class="navbar">
-		<a href="index.php"><img src="images/assets/Desain_MenuUtama.png" class="header animated bounceInDown" ></a>
+		<a href="index.php"><img src="images/assets/headerLogo.svg" class="header animated bounceInDown" ></a>
 		<div class="header-content">
 			<div class="info-header">
 
